@@ -1,5 +1,5 @@
 #Задаём имя рабочего потока
-name: Build a JAR in spring boot using springboot
+name: Build a JAR
 
 #๋Определяем ветки для запуска workflow
 on:
@@ -36,10 +36,10 @@ jobs:
     - name: Run Tests
       run: mvn test
 
-
+#็Разворачиваем собраный проект на предполагаемом сервере, под управлением Линукс-ОС
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: deploy
-        run: echo "Deploy deploy deploy ..."
+        run: echo "Deploy is successfull."
